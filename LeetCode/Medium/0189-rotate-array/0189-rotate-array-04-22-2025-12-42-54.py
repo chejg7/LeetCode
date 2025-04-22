@@ -11,3 +11,17 @@ class Solution:
 
         k = k % len(nums)
         nums[:] = nums[-k:] + nums[:-k]
+
+        # 공간복잡도 O(1)으로 풀 수 있는 방법(리스트를 세 번 뒤집음)
+        # def reverse(start, end):
+        #     while start < end:
+        #         nums[start], nums[end] = nums[end], nums[start]
+        #         start += 1
+        #         end -= 1
+
+        # n = len(nums)
+        # k %= n
+
+        # reverse(0, n - 1)
+        # reverse(0, k - 1)
+        # reverse(k, n - 1)
